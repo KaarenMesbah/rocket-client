@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval' data: blob:;">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>rocket</title>
+</head>
+
+<body>
+
+    <div class="chat">
+        <div class="bar hidden" id="bar"><img src="./img/left-arrow.png" class="Btn" alt="" id="back"></div>
+
+        <div class="messages hidden" id="messages">
+            <div class="container" id="messageContainer">
+                <!-- <div class="message-blue">
+                    <p class="message-content">This is an awesome message!</p>
+                    <div class="message-timestamp-left">SMS 13:37</div>
+                </div>
+
+                <div class="message-orange">
+                    <p class="message-content">I agree that your message is awesome!</p>
+                    <div class="message-timestamp-right">SMS 13:37</div>
+                </div> -->
+            </div>
+            <div class="send">
+                <div class="messageBox">
+                    <div class="fileUploadWrapper">
+                        <label for="file">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 337 337">
+                                <circle stroke-width="20" stroke="#6c6c6c" fill="none" r="158.5" cy="168.5" cx="168.5">
+                                </circle>
+                                <path stroke-linecap="round" stroke-width="25" stroke="#6c6c6c" d="M167.759 79V259">
+                                </path>
+                                <path stroke-linecap="round" stroke-width="25" stroke="#6c6c6c" d="M79 167.138H259">
+                                </path>
+                            </svg>
+                            <span class="tooltip">Add an image</span>
+                        </label>
+                        <input type="file" id="file" name="file" />
+                    </div>
+                    <input required="" placeholder="Message..." type="text" id="messageInput" />
+                    <button id="sendButton">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 664 663">
+                            <path fill="none"
+                                d="M646.293 331.888L17.7538 17.6187L155.245 331.888M646.293 331.888L17.753 646.157L155.245 331.888M646.293 331.888L318.735 330.228L155.245 331.888">
+                            </path>
+                            <path stroke-linejoin="round" stroke-linecap="round" stroke-width="33.67" stroke="#6c6c6c"
+                                d="M646.293 331.888L17.7538 17.6187L155.245 331.888M646.293 331.888L17.753 646.157L155.245 331.888M646.293 331.888L318.735 330.228L155.245 331.888">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="app" class="app hidden">
+            <div class="bar" id="bar1">
+                <button class="Btn" id="change">
+                    <div class="sign"><svg viewBox="0 0 512 512">
+                            <path
+                                d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z">
+                            </path>
+                        </svg></div>
+                </button>
+                <div class="loader" id="loader">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                    <div class="bar4"></div>
+                    <div class="bar5"></div>
+                    <div class="bar6"></div>
+                    <div class="bar7"></div>
+                    <div class="bar8"></div>
+                    <div class="bar9"></div>
+                    <div class="bar10"></div>
+                    <div class="bar11"></div>
+                    <div class="bar12"></div>
+                </div>
+            </div>
+            <div class="user" id="user">
+                <!-- <div class="cell" onclick="GetChat()"><img class="avatar" src="./img/disability.png" alt="bruh" id = ""><p class="name">name</p><p class="num">1</p></div> -->
+            </div>
+        </div>
+
+
+
+
+        <div class="app" id="main">
+            <h1>Rocket</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+            <div class="ass">
+                <label for="inputname" class="input">IP :</label>
+                <div class="mt-2">
+                    <input type="text" id="ip" name="inputname" class="inputname" />
+                </div>
+            </div>
+            <div class="ass">
+                <label for="inputname" class="input">PORT :</label>
+                <div class="mt-2">
+                    <input type="text" id="port" name="inputname" class="inputname" />
+                </div>
+            </div>
+            <div class="ass">
+                <button class="go" id="go">GO</button>
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>
